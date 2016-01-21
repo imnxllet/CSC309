@@ -1,0 +1,770 @@
+/*
+
+style structure:
+- main
+- resets
+- links
+- other
+
+colors:
+- link: #3399FF
+- hovered link: #E9F6FB
+- visited link: #25BA2A
+- translucency: rgba(255, 255, 255, 0.9)
+
+*/
+/*main*/
+body {
+  font-family: "Avenir", sans-serif;
+  font-size: 16px;
+  margin: 0 auto;
+  width: 1220px;
+  padding: 0px 20px;
+  line-height: 1.6;
+  cursor: default;
+}
+@font-face {
+  font-family: code-font;
+  src: url("consolas.ttf");
+}
+.center {
+  width: 850px;
+  margin: 0 auto;
+  animation: fadein 0.6s;
+  -moz-animation: fadein 0.6s;
+  -webkit-animation: fadein 0.6s;
+  -o-animation: fadein 0.6s;
+}
+#content {
+  margin: 40px 0px 0px 0px;
+  padding-top: 2em;
+  animation: fadein 0.6s;
+  -moz-animation: fadein 0.6s;
+  -webkit-animation: fadein 0.6s;
+  -o-animation: fadein 0.6s;
+}
+#content h4 {
+  margin-top: 15px;
+}
+#content #materials tr:first-child {
+  font-weight: 700;
+}
+h1 {
+  font-size: 28px;
+  font-weight: 100;
+  line-height: 1.2;
+  margin: 10px 0px 15px 0px;
+}
+h2, h3, h4, h5, h6 {
+  font-weight: 100;
+  margin: 10px 0px;
+}
+p {
+  margin: 10px 0px;
+}
+code {
+  font-family: code-font;
+  font-size: 14px;
+  padding: 2px;
+  border-radius: 2px;
+  background: #F4F4F4;
+  white-space: pre;
+}
+pre code {
+  font-family: code-font;
+  font-size: 14px;
+  padding: 6px 0px;
+  border-radius: 4px;
+  background: none;
+  white-space: pre;
+  display: block;
+  margin: 20px;
+}
+footer {
+  text-align: center;
+  color: #777777;
+}
+#cs-logo {
+  width: 400px;
+  margin: 0 auto;
+}
+/*animations*/
+/*@keyframes fadein { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadein { from { opacity:0; } to { opacity:1; } }
+@-webkit-keyframes fadein { from { opacity:0; } to { opacity:1; } }
+@-o-keyframes fadein { from { opacity:0; } to { opacity: 1; } }*/
+/*text selection*/
+::selection {
+  background: #E7E7E7;
+  /* Safari */
+}
+::-moz-selection {
+  background: #E7E7E7;
+  /* Firefox */
+}
+/*resets*/
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p, pre, blockquote, form, fieldset, table, ul {
+  margin: 1em 0;
+}
+.clear {
+  clear: both;
+}
+img {
+  border: 0;
+}
+fieldset {
+  border: 1px solid transparent;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+td {
+  text-align: left;
+}
+/*links*/
+a {
+  padding: 2px 0px;
+  border-radius: 4px;
+  outline: none;
+  color: #33CC00;
+  text-decoration: none;
+  transition: 0.5s;
+  /*background: url(images/external-link.gif) no-repeat right top;*/
+  /*padding-right: 10px;*/
+}
+a:hover, a:focus {
+  background: #FFE0CC;
+  transition: 0s;
+}
+/*to indicate an external link*/
+/*a.external{
+  position: relative;
+}
+a.external span{
+  display: none;
+}
+a.external:hover span{
+  display: block;
+  position: absolute;
+  top: 3em;
+  left: 1em;
+  border-radius: 2px;
+  border: 1px solid black;
+  background: yellow;
+  color: black;
+  font-size: 12px;
+  padding: 0px 3px;
+}*/
+nav {
+  /*top navigation bar*/
+  position: fixed;
+  width: 858px;
+  line-height: 2;
+  margin: -57px 0 0 -8px;
+  padding: 9px 0 6px 0;
+  z-index: 1;
+  /*background-color: rgba(255, 255, 255, 0);*/
+}
+@media screen and (max-width: 1000px) {
+  /*nav bar for mobile display*/
+  nav {
+    position: fixed;
+    width: 858px;
+    top: 40px;
+    left: 30px;
+    /*line-height: 2;*/
+    /*margin: -57px 0 0 -8px;*/
+    /*padding: 9px 0 6px 0;*/
+    /*background-color: rgba(255, 255, 255, 0);*/
+  }
+}
+ul {
+}
+li {
+  margin-left: 40px;
+}
+nav li {
+  margin: 0;
+  display: inline-block;
+}
+table li {
+  margin: 0;
+  display: block;
+}
+nav li a {
+  padding: 4px 8px 3px 8px;
+  border-radius: 7px;
+}
+#more-menu {
+  /*left bar on the more page, with relative positioning*/
+  max-width: 200px;
+  float: left;
+  margin: 20px 10px 0px 0px;
+  /*overflow-y: scroll;*/
+}
+#more-menu a {
+  display: block;
+  padding: 5px 5px 5px 10px;
+  margin: 0px 0px 5px 0px;
+  border-radius: 10px;
+}
+#more-menu .here {
+  padding: 5px 5px 5px 10px;
+  background: #3399FF;
+  color: white;
+}
+#more-menu .here:hover {
+  background: #3399FF;
+  color: white;
+}
+#navigation {
+  /*@w1*/
+  position: fixed;
+  width: 100%;
+  height: 47px;
+  margin: -40px 0 0 0;
+  padding: 9px 0 6px 0;
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 1;
+}
+#line_left {
+  position: fixed;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  margin: 7px 0px 0px -75px;
+  height: 2px;
+  background: -webkit-gradient(linear, 10 0, 20% 0, from(white), to(#C0C0C0), color-stop(100%, #C0C0C0));
+  animation: fadein 0.4s;
+  -moz-animation: fadein 0.4s;
+  -webkit-animation: fadein 0.4s;
+  -o-animation: fadein 0.4s;
+}
+#line_right {
+  position: fixed;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  margin: 7px 0px 0px 325px;
+  height: 2px;
+  background: -webkit-gradient(linear, 285 0, 95% 0, from(#C0C0C0), to(white), color-stop(100%, #C0C0C0));
+  animation: fadein 0.4s;
+  -moz-animation: fadein 0.4s;
+  -webkit-animation: fadein 0.4s;
+  -o-animation: fadein 0.4s;
+}
+#line_left_long {
+  position: fixed;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  margin: 7px 0px 0px -255px;
+  height: 2px;
+  background: -webkit-gradient(linear, 10 0, 20% 0, from(white), to(#C0C0C0), color-stop(100%, #C0C0C0));
+  animation: fadein 0.4s;
+  -moz-animation: fadein 0.4s;
+  -webkit-animation: fadein 0.4s;
+  -o-animation: fadein 0.4s;
+}
+#line_right_long {
+  position: fixed;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  margin: 7px 0px 0px 325px;
+  height: 2px;
+  background: -webkit-gradient(linear, 285 0, 95% 0, from(#C0C0C0), to(white), color-stop(100%, #C0C0C0));
+  animation: fadein 0.4s;
+  -moz-animation: fadein 0.4s;
+  -webkit-animation: fadein 0.4s;
+  -o-animation: fadein 0.4s;
+}
+.here {
+  /*currently selected nav button*/
+  padding: 4px 8px 4px 8px;
+  border-radius: 7px;
+  background: #3399FF;
+  color: white;
+}
+.here:hover {
+  background: #3399FF;
+  color: white;
+}
+.more {
+  /*not used. this is the "more" nav button with drop down animation*/
+  padding: 4px 8px 3px 8px;
+  border-radius: 7px;
+  margin: 0px 15px 0px 0px;
+  /*background: white;*/
+  border: 1px solid white;
+  transition: 0.2s;
+}
+.more:hover {
+  /*not used*/
+  padding: 4px 8px 3px 8px;
+  border-radius: 7px 7px 0px 0px;
+  margin: 0px 15px 0px 0px;
+  background: white;
+  border: 1px solid #3399FF;
+  border-bottom: 1px solid white;
+  transition: 0s;
+}
+#left {
+  /*not used. left bar, with fixed positioning and border*/
+  max-width: 200px;
+  position: fixed;
+  top: 70px;
+  bottom: 10%;
+  overflow-y: scroll;
+  border: 1px solid #3399FF;
+  border-radius: 10px;
+  padding: 10px;
+}
+#left a {
+  /*not used*/
+  display: block;
+  padding: 5px;
+  color: black;
+}
+#left p {
+  /*not used*/
+  display: block;
+  padding: 5px;
+  margin: auto;
+  color: #D0D0D0;
+}
+/*course agenda*/
+.agenda {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.agenda ol {
+  margin-top: 1em;
+}
+.agenda ol li {
+  display: block;
+  padding: 0 0 15px 40px;
+  margin: 0;
+}
+.agenda ol li.done {
+  background: url("../images/check.png") no-repeat left top;
+}
+/*logistics*/
+#logistics {
+  margin-top: 2em;
+  width: 100%;
+}
+#logistics table {
+  margin: 0 auto;
+  padding: 0;
+}
+#logistics-table {
+  width: 100%;
+}
+#logistics-lectures {
+  width: 100%;
+}
+#logistics td, #logistics th {
+  margin: 0;
+  padding: 4px;
+}
+#logistics tr {
+  width: 100%;
+}
+#logistics td {
+  text-align: center;
+}
+#logistics-table {
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
+}
+.logistics-row-header {
+  font-weight: bold;
+  text-align: right;
+  vertical-align: top;
+  font-size: 1.05em;
+}
+#logistics-lectures td {
+  width: 33%;
+  text-align: center;
+}
+#logistics-labs th, #logistics-labs td {
+  text-align: center;
+  font-weight: normal;
+}
+/*materials table*/
+.materials {
+  /*@w2*/
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.materials table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  /*width:100%;*/
+  /*height:100%;*/
+  margin: 0 auto;
+  padding: 0px;
+  border: solid 1px grey;
+}
+.materials tr:last-child td:last-child {
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.materials table tr:first-child td:first-child {
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.materials table tr:first-child td:last-child {
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.materials tr:last-child td:first-child {
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.materials tr:hover td {
+}
+.materials tr:nth-child(odd) {
+  background-color: #FFFFFF;
+}
+.materials tr:nth-child(even) {
+  background-color: #FFFFFF;
+}
+.materials td {
+  vertical-align: middle;
+  border: 1px solid #AAAAAA;
+  border-width: 0px 1px 1px 0px;
+  text-align: left;
+  padding: 9px;
+  color: #000000;
+}
+.materials tr:last-child td {
+  border-width: 0px 1px 0px 0px;
+}
+.materials tr td:last-child {
+  border-width: 0px 0px 1px 0px;
+}
+.materials tr:last-child td:last-child {
+  border-width: 0px 0px 0px 0px;
+}
+.materials tr:first-child td {
+  background: -o-linear-gradient(bottom, #F4F4F4 5%, #F4F4F4 100%);
+  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f4f4f4), color-stop(1, #f4f4f4) );
+  background:-moz-linear-gradient( center top, #f4f4f4 5%, #f4f4f4 100% );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4f4f4", endColorstr="#f4f4f4");
+  background: -o-linear-gradient(top,#f4f4f4,f4f4f4);
+  background-color: #F4F4F4;
+  border: 0px solid #AAAAAA;
+  border-width: 0px 0px 1px 1px;
+  color: #000000;
+}
+.materials tr:first-child:hover td {
+  background: -o-linear-gradient(bottom, #F4F4F4 5%, #F4F4F4 100%);
+  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f4f4f4), color-stop(1, #f4f4f4) );
+  background:-moz-linear-gradient( center top, #f4f4f4 5%, #f4f4f4 100% );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f4f4f4", endColorstr="#f4f4f4");
+  background: -o-linear-gradient(top,#f4f4f4,f4f4f4);
+  background-color: #F4F4F4;
+}
+.materials tr:first-child td:first-child {
+  border-width: 0px 0px 1px 0px;
+}
+.materials tr:first-child td:last-child {
+  border-width: 0px 0px 1px 1px;
+}
+.materials tr:first-child td:nth-child(1) {
+  /*topic column*/
+  width: 100px;
+}
+.materials th {
+  /*topic column*/
+  width: 50px;
+}
+.materials tr:first-child td:nth-child(2) {
+  /*week column*/
+  width: 80px;
+}
+.materials tr:first-child td:nth-child(3) {
+  /*prep column*/
+  width: 100px;
+}
+.materials tr:first-child td:nth-child(4) {
+  /*learn column*/
+  width: 300px;
+}
+.materials tr:first-child td:nth-child(5) {
+  /*resources column*/
+  width: 300px;
+}
+.materials #current-week {
+  background-color: #F4F4F4;
+}
+/*addressing issue 3*/
+.materials td:nth-last-child(2), .materials td:nth-last-child(3), .materials td:nth-last-child(4) {
+  text-align: center;
+}
+.materials #no-class-week {
+  text-align: center;
+}
+.materials #no-class-learn {
+  text-align: left;
+}
+.materials a:visited {
+  /*color: #25BA2A;*/
+}
+.materials td:first-child {
+  /*@W3*/
+  /*background: red;*/
+  /*position: relative;*/
+  /*z-index: -1;*/
+}
+/* Exams table */
+#exams-table {
+  margin: 0 auto;
+  border-top: solid black 1px;
+  border-bottom: solid black 1px;
+}
+#exams-table td {
+  text-align: center;
+  padding: 4px;
+  margin: 0;
+}
+#exams-table th {
+  padding: 4px;
+  text-align: right;
+  vertical-align: top;
+}
+/*image style*/
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*table style*/
+table {
+  outline: none;
+  border-collapse: collapse;
+}
+/*td {
+  padding: 0px 0px 10px 0px;
+}*/
+/*#announcement tr > td:first-child {
+  color: #A9A9A9;
+  width: 140px;
+  text-align: right;
+  padding: 0px 20px 0px 0px;
+  vertical-align:top;
+  line-height: 1.4;
+}
+#announcement td:nth-child(2) {
+  vertical-align:top;
+  line-height: 1.4;
+}*/
+#instructor tr > td:first-child {
+  color: #A9A9A9;
+  padding: 0px 20px 0px 0px;
+  vertical-align: top;
+  line-height: 1.4;
+}
+#instructor td:nth-child(2) {
+  vertical-align: top;
+  line-height: 1.4;
+}
+/*video*/
+button {
+  width: 850px;
+  height: 450px;
+  border: 1px solid #3399FF;
+  border-radius: 10px;
+}
+/*pdf style*/
+object[type="application/pdf"] {
+  border: solid #CCCCCC 3px;
+  border-radius: 6px;
+  width: 850px;
+  height: 80vh;
+}
+/*utoronto logo*/
+.logo {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 15px;
+  display: block;
+  margin: 40px auto 10px auto;
+  width: 100%;
+  transition: 0.5s;
+}
+.logo:hover {
+  border: 1px solid #3399FF;
+  border-radius: 10px;
+  transition: 0s;
+}
+/*rotate text*/
+.rotate {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  /* Should be unset in IE9+ I think. */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  /* more edits to rotated text */
+  text-align: center !important;
+  font-size: 18px;
+  overflow: hidden;
+  margin: 0px -80px 0px -80px;
+  /*white-space: nowrap;*/
+  /* font smoothing */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Feedback form */
+#feedback-form input {
+  font-family: "Avenir", sans-serif;
+  font-size: 16px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  width: 315px;
+  padding: 0.25em;
+}
+#comment {
+  width: 100%;
+  font-family: "Avenir", sans-serif;
+  font-size: 16px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 0.5em;
+}
+#instructor-select {
+  font-size: 16px;
+  font-family: "Avenir", sans-serif;
+}
+/* Syllabus */
+#marking-scheme tr {
+  text-align: center;
+  border: 1px solid grey;
+  padding: 4px;
+}
+#marking-scheme td, #marking-scheme th {
+  padding: 4px;
+}
+#marking-scheme tr td:nth-child(1) {
+  /*component column*/
+  width: 120px;
+}
+#marking-scheme tr td:nth-child(2) {
+  /*weight column*/
+  width: 100px;
+  text-align: center;
+}
+#marking-scheme tr td:nth-child(3) {
+  /*description column*/
+  width: 275px;
+}
+#marking-scheme tr td:nth-child(4) {
+  /*due column*/
+  width: 220px;
+  text-align: center;
+}
+#penalty-table {
+  margin: 0 auto;
+}
+#penalty-table tr {
+  border: 1px solid grey;
+}
+#penalty-table td {
+  padding: 4px;
+  text-align: center;
+}
+#penalty-table tr td:nth-child(1) {
+  /*component column*/
+  width: 150px;
+}
+#penalty-table tr td:nth-child(2) {
+  /*weight column*/
+  width: 80px;
+}
+/* Course team table */
+#course-team-table {
+  border-collapse: collapse;
+}
+#course-team-table td {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  margin: 0;
+  padding: 5px;
+  width: 160px;
+  height: 160px;
+}
+#course-team-table img {
+  width: 150px;
+  height: 150px;
+  margin: 5px 0 0 0;
+  padding: 0;
+}
+.rTable {
+  display: table;
+  width: 100%;
+  padding-top: 0;
+}
+
+.rTableRow {
+  display: table-row;
+  
+}
+.rTableHeading {
+  display: table-header-group;
+  background-color: #DDD;
+}
+.rTableCell, .rTableHead {
+  display: table-cell;
+  padding: 3px 10px;
+  border: 1px solid #999999;
+}
+.rTableHeading {
+  display: table-header-group;
+  background-color: #DDD;
+  font-weight: bold;
+}
+.rTableFoot {
+  display: table-footer-group;
+  font-weight: bold;
+  background-color: #DDD;
+}
+.rTableBody {
+  display: table-row-group;
+  background-color: #E5F2FF;
+}
