@@ -35,29 +35,31 @@ body {
   -webkit-animation: fadein 0.6s;
   -o-animation: fadein 0.6s;
 }
-#content {
-  margin: 40px 0px 0px 0px;
-  padding-top: 2em;
-  animation: fadein 0.6s;
-  -moz-animation: fadein 0.6s;
-  -webkit-animation: fadein 0.6s;
-  -o-animation: fadein 0.6s;
+
+#welcome img{
+  padding-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: auto;
 }
-#content h4 {
-  margin-top: 15px;
+.category{
+  font-weight: bolder;
+  width: auto;
+  border:2px solid;
+  font-size: 20px;
+  margin-bottom: 5px;
+
 }
-#content #materials tr:first-child {
-  font-weight: 700;
-}
-h1 {
-  font-size: 28px;
-  font-weight: 100;
-  line-height: 1.2;
-  margin: 10px 0px 15px 0px;
-}
-h2, h3, h4, h5, h6 {
-  font-weight: 100;
-  margin: 10px 0px;
+.subcat{
+  font-style: italic;
+  font-weight: bold;
+  color: yellow;
+  background-color: black;
+  display: inline-block;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 10px;
 }
 p {
   margin: 10px 0px;
@@ -110,25 +112,13 @@ footer {
   margin: 0;
   padding: 0;
 }
-h1, h2, h3, h4, h5, h6, p, pre, blockquote, form, fieldset, table, ul {
+h1, p, pre, blockquote, form, fieldset, ul {
   margin: 1em 0;
 }
 .clear {
   clear: both;
 }
-img {
-  border: 0;
-}
-fieldset {
-  border: 1px solid transparent;
-}
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-td {
-  text-align: left;
-}
+
 /*links*/
 a {
   padding: 2px 0px;
@@ -144,34 +134,18 @@ a:hover, a:focus {
   background: #FFE0CC;
   transition: 0s;
 }
-/*to indicate an external link*/
-/*a.external{
-  position: relative;
-}
-a.external span{
-  display: none;
-}
-a.external:hover span{
-  display: block;
-  position: absolute;
-  top: 3em;
-  left: 1em;
-  border-radius: 2px;
-  border: 1px solid black;
-  background: yellow;
-  color: black;
-  font-size: 12px;
-  padding: 0px 3px;
-}*/
+
 nav {
   /*top navigation bar*/
   position: fixed;
-  width: 858px;
+  width: auto;
+  height: 57.5px;
   line-height: 2;
-  margin: -57px 0 0 -8px;
-  padding: 9px 0 6px 0;
-  z-index: 1;
-  /*background-color: rgba(255, 255, 255, 0);*/
+  margin: -20px 0 0 0px;
+  padding: 10px 1px 0 1px;
+  background-color: black;
+  border-radius: 10px;
+  /*background-color: rgba(255, 255, 255, 0.9);*/
 }
 @media screen and (max-width: 1000px) {
   /*nav bar for mobile display*/
@@ -200,8 +174,21 @@ table li {
   display: block;
 }
 nav li a {
-  padding: 4px 8px 3px 8px;
-  border-radius: 7px;
+  padding: 4px 10px 4px 10px;
+  margin-left: 1px;
+  margin-right: :1px;
+  border-radius: 17px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+.course img{
+  display: block;
+}
+
+.section{
+  text-decoration: underline;
+  font-weight: bold;
 }
 #more-menu {
   /*left bar on the more page, with relative positioning*/
@@ -210,31 +197,8 @@ nav li a {
   margin: 20px 10px 0px 0px;
   /*overflow-y: scroll;*/
 }
-#more-menu a {
-  display: block;
-  padding: 5px 5px 5px 10px;
-  margin: 0px 0px 5px 0px;
-  border-radius: 10px;
-}
-#more-menu .here {
-  padding: 5px 5px 5px 10px;
-  background: #3399FF;
-  color: white;
-}
-#more-menu .here:hover {
-  background: #3399FF;
-  color: white;
-}
-#navigation {
-  /*@w1*/
-  position: fixed;
-  width: 100%;
-  height: 47px;
-  margin: -40px 0 0 0;
-  padding: 9px 0 6px 0;
-  background-color: rgba(255, 255, 255, 1);
-  z-index: 1;
-}
+
+
 #line_left {
   position: fixed;
   display: none;
@@ -263,34 +227,7 @@ nav li a {
   -webkit-animation: fadein 0.4s;
   -o-animation: fadein 0.4s;
 }
-#line_left_long {
-  position: fixed;
-  display: none;
-  margin-left: auto;
-  margin-right: auto;
-  width: 600px;
-  margin: 7px 0px 0px -255px;
-  height: 2px;
-  background: -webkit-gradient(linear, 10 0, 20% 0, from(white), to(#C0C0C0), color-stop(100%, #C0C0C0));
-  animation: fadein 0.4s;
-  -moz-animation: fadein 0.4s;
-  -webkit-animation: fadein 0.4s;
-  -o-animation: fadein 0.4s;
-}
-#line_right_long {
-  position: fixed;
-  display: none;
-  margin-left: auto;
-  margin-right: auto;
-  width: 600px;
-  margin: 7px 0px 0px 325px;
-  height: 2px;
-  background: -webkit-gradient(linear, 285 0, 95% 0, from(#C0C0C0), to(white), color-stop(100%, #C0C0C0));
-  animation: fadein 0.4s;
-  -moz-animation: fadein 0.4s;
-  -webkit-animation: fadein 0.4s;
-  -o-animation: fadein 0.4s;
-}
+
 .here {
   /*currently selected nav button*/
   padding: 4px 8px 4px 8px;
@@ -301,6 +238,26 @@ nav li a {
 .here:hover {
   background: #3399FF;
   color: white;
+}
+#course{
+clear: both;
+}
+#prof{
+  float: left;
+  width: 50%;
+  overflow: hidden;
+}
+#prof img{
+  margin-top: 10px;
+  width: 140px;
+}
+#ta{
+  display: inline-block;
+  float: right;
+  width: 100% - 20px;
+}
+#feedback{
+  clear: both;
 }
 .more {
   /*not used. this is the "more" nav button with drop down animation*/
@@ -743,7 +700,7 @@ object[type="application/pdf"] {
 
 .rTableRow {
   display: table-row;
-  
+
 }
 .rTableHeading {
   display: table-header-group;
@@ -751,7 +708,7 @@ object[type="application/pdf"] {
 }
 .rTableCell, .rTableHead {
   display: table-cell;
-  padding: 3px 10px;
+  padding-left: 10px;
   border: 1px solid #999999;
 }
 .rTableHeading {
