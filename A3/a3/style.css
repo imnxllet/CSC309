@@ -1,0 +1,46 @@
+header{
+
+  color: #00aced;
+  font-size: 17pt;
+  margin-left: 300px;
+}
+
+property{
+	color: #00aced;
+	font-size: 13pt;
+	border-style: double;
+	border-color: #00aced;
+	border-width: 1pt;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+button{
+    background-color: #00aced; /* Green */
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	margin: 10px 10px 10px 10px;
+	border-radius: 4px;
+	transition-duration: 0.4s;
+    cursor: pointer;
+    border: 2px solid #00aced;
+}
+button:hover {
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+    border: 2px solid #00aced;
+}
+
+input{
+	margin: 10px 0px 10px 0px;
+}
+#tweetid, #userid{
+	margin-left: 20px;
+}
+
+

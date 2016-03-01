@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<head>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="Page1" class="page" style="">
+        <h1>Tap Tap Bug</h1>
+        <form action="">
+
+        <div class="level">
+        <input type="radio" id="radio01" name="radio" onclick="gethighest(1);"/>
+        <label for="radio01"><span></span>LEVEL 1</label>
+        </div>
+
+        <div class="level">
+        <input type="radio" id="radio02" name="radio" onclick="gethighest(2);"/>
+        <label for="radio02"><span></span>LEVEL 2</label>
+        </div>
+
+        <br>
+        <p id="score">Highest Score: </p></br>
+        </form>
+
+        <span class="button" onclick="show('Page2');">Start</span>
+    </div>
+
+
+
+
+    <div id="Page2" class="page" style="display:none">
+        <div class="wrapper">
+        <canvas id="infobar" width=400 height=100 style="border:1px solid #d3d3d3;"></canvas>
+        <canvas id="game" width=400 height=500 style="border:1px solid #d3d3d3;"></canvas>
+        </div>
+    </div>
+
+</body>
+
+<script src="game.js"></script>
+
+</html>
